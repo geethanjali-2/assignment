@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class RomantoInteger {
     public static int romanToInt(String s) {
-        // Create a mapping of Roman numeral symbols to integer values
         HashMap<Character, Integer> Map = new HashMap<>();
         Map.put('I', 1);
         Map.put('V', 5);
