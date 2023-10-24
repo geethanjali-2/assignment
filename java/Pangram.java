@@ -1,7 +1,5 @@
-
 import java.io.*;
 import java.util.*;
-
 public class Pangram {
 	public static boolean isPangram(String str)
 	{
