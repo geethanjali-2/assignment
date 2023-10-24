@@ -8,11 +8,12 @@ function validateAndSubmit() {
     const email = document.getElementById("email").value;
     const mobile = document.getElementById("mobile").value;
 
-    // Check if all mandatory fields are filled
+
     if (!firstName || !lastName || !dob || !country || !profession || !email || !mobile) {
         alert("Please fill in all mandatory fields before submitting.");
-    } else {
-        // Set values in the popup table
+    } 
+    else 
+    {    
         document.getElementById("popup-firstName").textContent = firstName;
         document.getElementById("popup-lastName").textContent = lastName;
         document.getElementById("popup-dob").textContent = dob;
