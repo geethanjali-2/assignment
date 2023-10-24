@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Survey Form</h1>
+        <form id="surveyForm" onsubmit="return false;">
+            <div class="form-group">
+                <label for="firstName">First Name*</label>
+                <input type="text" id="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name*</label>
+                <input type="text" id="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth*</label>
+                <input type="text" id="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="country">Country*</label>
+                <select id="country" required>
+                    <option value="" disabled selected>Select your country</option>
+                    <option value="India">India</option>
+                    <option value="China">China</option>
+                    <option value="UK">UK</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Japan">Japan</option>
+                    <option value="USA">USA</option>
+                    <option value="Germany">Germany</option>
+                    
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Gender*</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="gender" value="Male"> Male</label>
+                    <label><input type="checkbox" name="gender" value="Female"> Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="profession">Profession*</label>
+                <input type="text" id="profession" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email*</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile Number*</label>
+                <input type="tel" id="mobile" required>
+            </div>
+            <div class="form-group">
+                <button type="button" onclick="validateAndSubmit()">Submit</button>
+                <button type="button" onclick="resetForm()">Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Popup to display submitted values -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h2>Submitted Values:</h2>
+            <table class="popup-table">
+                <tr>
+                    <th>Field</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td><strong>First Name:</strong></td>
+                    <td id="popup-firstName"></td>
+                </tr>
+                <tr>
+                    <td><strong>Last Name:</strong></td>
+                    <td id="popup-lastName"></td>
+                </tr>
+                <tr>
+                    <td><strong>Date of Birth:</strong></td>
+                    <td id="popup-dob"></td>
+                </tr>
+                <tr>
+                    <td><strong>Country:</strong></td>
+                    <td id="popup-country"></td>
+                </tr>
+                <tr>
+                    <td><strong>Gender:</strong></td>
+                    <td id="popup-gender"></td>
+                </tr>
+                <tr>
+                    <td><strong>Profession:</strong></td>
+                    <td id="popup-profession"></td>
+                </tr>
+                <tr>
+                    <td><strong>Email:</strong></td>
+                    <td id="popup-email"></td>
+                </tr>
+                <tr>
+                    <td><strong>Mobile Number:</strong></td>
+                    <td id="popup-mobile"></td>
+                </tr>
+            </table>
+            <button onclick="closePopupAndResetForm()">Close</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
